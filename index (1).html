@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santiago Barreto Carranza | Portafolio ejecutivo</title>
+<meta name="description" content="Magíster en Gobierno del Territorio y Gestión Pública. Analítica de datos, políticas públicas, sostenibilidad y RSC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12263A;--muted:#52606D;--line:#D9E0E6;--bg:#F5F7F8;--paper:#fff;--teal:#0F7B6C;--blue:#2B5C8A;--amber:#C98A1B}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:600;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-family:Newsreader,serif;font-weight:600;font-size:1.25rem;text-decoration:none}
+nav{display:flex;gap:22px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--teal)}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-weight:500;text-decoration:none;border:1.5px solid var(--teal);background:var(--teal);color:#fff;font-size:.95rem;cursor:pointer;font-family:inherit}
+.btn.alt{background:transparent;color:var(--teal)}
+.btn:hover{filter:brightness(.92)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+section h2{font-size:2.1rem;margin-bottom:10px}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:32px}
+#inicio{border-top:0;padding:64px 0 40px}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:3.4rem;margin-bottom:12px}
+.role{color:var(--teal);font-weight:600;margin-bottom:18px}
+.hero p.pitch{font-size:1.2rem;max-width:34ch;margin-bottom:28px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:26px}
+.mono{width:84px;height:84px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:600 1.9rem Newsreader,serif;margin-bottom:16px}
+.facts{list-style:none;font-size:.95rem}
+.facts li{padding:8px 0;border-top:1px solid var(--line)}
+.facts li:first-child{border-top:0}
+.facts b{display:block;font-weight:600}
+.tl{margin-top:48px}
+.tl h2{font-size:1.5rem;margin-bottom:18px}
+.axis,.row{display:grid;grid-template-columns:210px 1fr;gap:16px;align-items:center}
+.axis{font-size:.8rem;color:var(--muted);margin-bottom:6px}
+.ticks{position:relative;height:18px}
+.ticks span{position:absolute;transform:translateX(-50%)}
+.row{padding:7px 0;font-size:.9rem}
+.track{position:relative;height:22px;background:#EDF1F4;border-radius:4px}
+.bar{position:absolute;top:0;bottom:0;border-radius:4px;transform-origin:left;animation:grow .9s ease-out both}
+@keyframes grow{from{transform:scaleX(0)}}
+.split{display:flex;height:26px;border-radius:5px;overflow:hidden;margin:26px 0 10px}
+.split div{height:100%}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:12px}
+summary{cursor:pointer;padding:18px 24px;list-style:none;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+summary::-webkit-details-marker{display:none}
+summary strong{font-family:Newsreader,serif;font-size:1.25rem}
+summary span{color:var(--muted);font-size:.92rem}
+details[open] summary{border-bottom:1px solid var(--line)}
+details ul{padding:18px 24px 22px 44px}
+details li{margin-bottom:8px}
+.org{padding:14px 24px 0;color:var(--muted);font-size:.92rem}
+dl{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+dl div{padding:18px 0;border-top:1px solid var(--line)}
+dt{font-family:Newsreader,serif;font-weight:600;font-size:1.2rem;margin-bottom:4px}
+dd{color:var(--muted);font-size:.97rem}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.edu h3{font-size:1.2rem;margin-bottom:6px}
+.edu p{color:var(--muted);font-size:.95rem}
+.prod{list-style:none}
+.prod li{padding:16px 0;border-top:1px solid var(--line)}
+.prod b{display:block;font-weight:600}
+.prod span{color:var(--muted);font-size:.95rem}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.groups h3{font-size:1.15rem;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:#E6EFEE;color:#0A5A4F;border-radius:999px;padding:4px 13px;font-size:.88rem}
+#contacto{background:var(--ink);color:#fff}
+#contacto .lead{color:#C5D0DA}
+#contacto .btn.alt{color:#fff;border-color:#fff}
+#contacto .btn:not(.alt){background:#fff;color:var(--ink);border-color:#fff}
+.ctl{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
+.photo{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;margin-bottom:16px;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--line)}
+.ctx{padding:12px 24px 0;max-width:75ch}
+.sub{padding:16px 24px 0;font-weight:600;font-size:.95rem}
+details ul{padding:8px 24px 14px 44px}
+.tags.in{padding:0 24px 22px}
+.doc{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--line)}
+.doc b{display:block}
+.doc small{color:var(--teal);font-weight:600;font-size:.85rem}
+.doc span{display:block;color:var(--muted);font-size:.95rem;margin-top:4px;max-width:70ch}
+.doc .btn{white-space:nowrap}
+.btn.off{opacity:.5;pointer-events:none}
+@media(max-width:820px){.doc{flex-direction:column;gap:10px}}
+@media(max-width:820px){
+nav{display:none}
+.hero,.edu,.groups,dl{grid-template-columns:1fr}
+.hero h1{font-size:2.5rem}
+.axis,.row{grid-template-columns:1fr;gap:4px}
+.axis>span:first-child{display:none}
+}
+@media(prefers-reduced-motion:reduce){.bar{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="brand" href="#inicio">Santiago Barreto</a>
+<nav aria-label="Secciones">
+<a href="#perfil">Perfil</a><a href="#experiencia">Experiencia</a><a href="#capacidades">Capacidades</a><a href="#formacion">Formación</a><a href="#produccion">Producción</a><a href="#competencias">Competencias</a>
+</nav>
+<a class="btn" href="https://wa.me/573183802983?text=Hola%20Santiago%2C%20vi%20tu%20portafolio">WhatsApp</a>
+</div>
+</header>
+
+<main>
+<section id="inicio">
+<div class="wrap">
+<div class="hero">
+<div>
+<h1>Santiago Barreto Carranza</h1>
+<p class="role">Magíster en Gobierno del Territorio y Gestión Pública</p>
+<p class="pitch">Convierto datos, evidencia y análisis de riesgo en decisiones para el sector público, las empresas y los territorios.</p>
+<div class="actions">
+<a class="btn" href="#experiencia">Ver trayectoria</a>
+<a class="btn alt" href="#contacto">Contactar</a>
+</div>
+</div>
+<aside class="card" aria-label="Datos rápidos">
+<img class="photo" src="perfil.jpg" alt="Santiago Barreto Carranza" width="132" height="132">
+<ul class="facts">
+<li><b>Ubicación</b>Bogotá, Colombia</li>
+<li><b>Enfoque</b>Analítica de datos, políticas públicas, sostenibilidad y RSC</li>
+<li><b>Idiomas</b>Español nativo, inglés B2, francés A2</li>
+</ul>
+</aside>
+</div>
+
+<div class="tl card" style="margin-top:48px">
+<h2>Trayectoria 2019–2026</h2>
+<div class="axis"><span></span><div class="ticks" id="ticks"></div></div>
+<div id="rows"></div>
+<div class="split" id="split" role="img" aria-label="Distribución de meses por tipo de entidad"></div>
+<div class="legend" id="legend"></div>
+</div>
+</div>
+</section>
+
+<section id="perfil">
+<div class="wrap">
+<h2>Perfil profesional</h2>
+<p class="lead">Gestión estratégica de proyectos, análisis cuantitativo y cualitativo, y formulación y seguimiento de políticas públicas.</p>
+<p style="max-width:70ch;margin-bottom:16px">He aplicado analítica de datos, automatización de procesos en Python, monitoreo de indicadores estratégicos y evaluación de proyectos para apoyar decisiones en contextos organizacionales y territoriales, tanto en el sector público como en el privado.</p>
+<p style="max-width:70ch;margin-bottom:16px">He trabajado con empresas, entidades públicas y comunidades locales en desarrollo sostenible, gestión de riesgos y articulación institucional. Esto incluye estrategias de RSC alineadas con los ODS y estándares ESG, procesos de empalme gubernamental y coordinación con agencias del Sistema de Naciones Unidas.</p>
+<p style="max-width:70ch">Soy docente universitario en pregrado y posgrado, y he dirigido trabajos de grado desde la definición del problema hasta la sustentación.</p>
+<p style="max-width:70ch;margin-top:16px">Desde 2019 ejerzo como consultor independiente en datos y finanzas para pymes, y en 2026 cofundé Elevation, una firma de formación, desarrollo de talento y coaching organizacional con medición de impacto.</p>
+</div>
+</section>
+
+<section id="experiencia">
+<div class="wrap">
+<h2>Experiencia profesional</h2>
+<p class="lead">Despliegue cada cargo para ver funciones y logros.</p>
+<div id="jobs"></div>
+</div>
+</section>
+
+<section id="capacidades">
+<div class="wrap">
+<h2>Capacidades</h2>
+<p class="lead">Seis áreas donde aplico datos y análisis para decidir mejor.</p>
+<dl>
+<div><dt>Analítica e indicadores</dt><dd>Monitoreo de indicadores estratégicos, bases de datos institucionales y dashboards en Power BI, R, Python y Tableau.</dd></div>
+<div><dt>Automatización e IA</dt><dd>Pipelines en Python, informes ejecutivos automatizados y transcripción de audio con IA para gestión documental.</dd></div>
+<div><dt>Políticas públicas y evaluación</dt><dd>Formulación, seguimiento y evaluación de impacto con los marcos de Easton, Bardach y Roth, y gestión pública bajo MIPG.</dd></div>
+<div><dt>RSC, ESG y sostenibilidad</dt><dd>Estrategias alineadas con ODS, GRI y ESG, Enfoque de Medios de Vida Sostenibles y gobernanza de bienes comunes (IAD de Ostrom).</dd></div>
+<div><dt>Riesgos políticos y socioambientales</dt><dd>Sistemas de monitoreo, matrices de criticidad por impacto y estrategias de licencia social de operación.</dd></div>
+<div><dt>Cooperación y docencia</dt><dd>Coordinación con el Sistema de Naciones Unidas, cooperación descentralizada y formación universitaria de pregrado y posgrado.</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="formacion">
+<div class="wrap">
+<h2>Formación académica</h2>
+<p class="lead">Gobierno del territorio, gestión pública y relaciones internacionales.</p>
+<div class="edu">
+<div class="card"><h3>Maestría en Gobierno del Territorio y Gestión Pública</h3><p>Pontificia Universidad Javeriana, 2024</p></div>
+<div class="card"><h3>Profesional en Finanzas, Gobierno y Relaciones Internacionales</h3><p>Universidad Externado de Colombia, 2016</p></div>
+</div>
+</div>
+</section>
+
+<section id="produccion">
+<div class="wrap">
+<h2>Producción y trabajos destacados</h2>
+<p class="lead">Investigación, herramientas y contenidos académicos. Los documentos se pueden consultar y descargar.</p>
+<div id="docs"></div>
+</div>
+</section>
+
+<section id="competencias">
+<div class="wrap">
+<h2>Competencias clave</h2>
+<p class="lead">Herramientas, temáticas y gestión.</p>
+<div class="groups">
+<div><h3>Herramientas</h3><div class="tags"><span>Power BI</span><span>R Studio</span><span>Python</span><span>Tableau</span><span>Excel avanzado</span><span>Aktek iO</span><span>Ucinet</span><span>Mactor</span><span>PowerShell</span><span>Canva</span><span>ODK</span></div></div>
+<div><h3>Temáticas</h3><div class="tags"><span>Coaching organizacional</span><span>Assessment de competencias</span><span>Empleabilidad juvenil</span><span>KPIs financieros</span><span>ODS</span><span>ESG y RSC</span><span>GRI</span><span>Medios de vida sostenibles</span><span>Cooperación internacional</span><span>Gestión de riesgos</span><span>Políticas públicas</span></div></div>
+<div><h3>Gestión</h3><div class="tags"><span>MIPG</span><span>SIGEP II</span><span>SIMO</span><span>SARLAFT</span><span>Scrum</span><span>Kanban</span><span>Marco lógico</span><span>Metodologías ágiles</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="wrap">
+<h2>¿Necesita convertir información en decisiones?</h2>
+<p class="lead">Consultorías, analítica de datos, políticas públicas, RSC y docencia.</p>
+<div class="ctl">
+<a class="btn" href="https://wa.me/573183802983?text=Hola%20Santiago%2C%20quiero%20conversar">Escribir por WhatsApp</a>
+<a class="btn alt" href="mailto:santiago.carranza5097@gmail.com">Enviar correo</a>
+<button class="btn alt" id="copy" type="button">Copiar correo</button>
+<a class="btn alt" href="https://linkedin.com/in/santiago-barreto-carranza">LinkedIn</a>
+</div>
+<p id="msg" role="status" aria-live="polite" style="min-height:1.5em;color:#C5D0DA"></p>
+</div>
+</section>
+</main>
+
+<footer>Santiago Barreto Carranza, portafolio profesional. Bogotá, Colombia.</footer>
+
+<script>
+// Para actualizar el portafolio, edite esta lista: [año, mes] de inicio y fin (fin null = actualidad).
+const JOBS=[
+{t:"Cofundador, formación y coaching organizacional",o:"Elevation Consulting Group, Bogotá (híbrido)",type:"emp",s:[2026,8],e:null,txt:"ago 2026 – actualidad",
+ctx:"Elevation nace de una premisa: formar no basta si no se mide. La firma reemplaza la capacitación aislada por un modelo continuo que integra diagnóstico, diseño, acompañamiento y medición, para que el desarrollo de personas y equipos se traduzca en competencias, oportunidades y resultados verificables.",
+b:["Cofundé y estructuré el modelo de trabajo en seis etapas (diagnosticar, planear, desarrollar, acompañar, medir y transformar), concebido para que cada intervención deje evidencia de impacto y no solo actividad formativa.",
+"Diseñé la oferta de servicios: talleres focalizados, programas de desarrollo, proyectos de transformación organizacional, planes de desarrollo individual (PDI), consultoría y assessment de competencias, y academias corporativas a medida.",
+"Adapto cada solución a la necesidad específica de la organización y del sector, tomando como punto de partida un diagnóstico y no un catálogo cerrado de cursos.",
+"Hemos diseñado e implementado soluciones de formación para laboratorios farmacéuticos y cooperantes internacionales."],
+tools:["Coaching organizacional","Assessment de competencias","Planes de desarrollo individual","Academias corporativas","Medición de impacto"]},
+{t:"Consultor independiente, datos y finanzas",short:"Valor Real",o:"Valor Real Asesores Financieros, Bogotá (híbrido)",type:"emp",s:[2019,10],e:null,txt:"oct 2019 – actualidad",
+ctx:"Práctica independiente de consultoría financiera orientada a empresas del segmento pyme. Su propósito es que las decisiones de la empresa se apoyen en indicadores confiables, planificación estratégica y una lectura explícita de los riesgos.",
+b:["Diseño sistemas de KPIs personalizados que traducen los objetivos de cada empresa en indicadores financieros y operativos medibles y comparables en el tiempo.",
+"Realizo evaluaciones exhaustivas de indicadores financieros y operativos y acompaño a los equipos directivos en la toma de decisiones basada en datos, de la planificación estratégica a la gestión de riesgos.",
+"Desarrollé y comercialicé bases de datos segmentadas para clientes con necesidades de inteligencia de mercado.",
+"Ejecuté proyectos de automatización documental en Python con ODK para organismos internacionales como UNODC, incluyendo la identificación por OCR de cédulas en actas escaneadas, su validación contra bases maestras en Excel y la generación de PDF finales en varios territorios."],
+tools:["Python","ODK","OCR","Excel","KPIs","Inteligencia de mercado","Gestión de riesgos"]},
+{t:"Consultor en empleabilidad y desarrollo juvenil",o:"2811, Bogotá (remoto)",type:"pri",s:[2025,6],e:[2025,8],txt:"jun 2025 – ago 2025",
+ctx:"Consultoría por contrato para llevar herramientas concretas de empleabilidad a jóvenes del municipio de Pacho, Cundinamarca, a través de la Academia de Ecohabilidades, un programa que combina formación práctica con acompañamiento personalizado.",
+b:["Diseñé y facilité la Academia de Ecohabilidades, estructurando el contenido a lo largo de la ruta completa de búsqueda de empleo: hoja de vida, entrevista, canales digitales y redes de contacto.",
+"Impartí cuatro talleres: optimización de CV bajo modelos ATS, simulación de entrevistas con metodología STAR, búsqueda de empleo en plataformas digitales y networking estratégico.",
+"Acompañé personalmente a 18 jóvenes en sus procesos de inserción laboral.",
+"Coordiné el scouting de 419 ofertas laborales verificadas en la región, para conectar la formación con oportunidades reales."],
+tools:["Empleabilidad juvenil","Metodología STAR","Modelos ATS","Networking","Facilitación"]},
+{t:"Asesor",short:"DAFP",o:"Departamento Administrativo de la Función Pública, Bogotá",type:"pub",s:[2021,1],e:[2021,7],txt:"ene 2021 – jul 2021",
+ctx:"Siete meses en la entidad rectora de la gestión pública, con trabajo en dos frentes: el institucional, centrado en el Modelo Integrado de Planeación y Gestión (MIPG), y el social, con el programa Estado Joven.",
+b:["Lideré el diseño de documentos de política pública en el marco del MIPG, apoyando la mejora de procesos internos en entidades públicas del orden local y regional.",
+"Coordiné estrategias intersectoriales para el programa Estado Joven, construyendo alianzas con gobiernos locales y entidades distritales para ampliar las oportunidades de inclusión laboral de jóvenes.",
+"Conocí desde adentro cómo operan las instituciones públicas y cómo el diseño de políticas se conecta con las comunidades a las que busca servir."],
+tools:["MIPG","Política pública","Estado Joven","Articulación intersectorial"]},
+{t:"Consultor analítico, proceso de empalme gubernamental",o:"DANE, Colombia",type:"pub",s:[2026,6],e:[2026,8],txt:"jun 2026 – ago 2026",
+ctx:"Apoyo analítico a la transición gubernamental del DANE y FONDANE: convertir documentos extensos de empalme, reportes presupuestales y sesiones de rendición de cuentas en información priorizada para quienes toman decisiones.",
+b:["Desarrollé una matriz de riesgos institucionales con 28 hallazgos bajo un marco de criticidad por impacto y produje documentos ejecutivos de síntesis para la transición.",
+"Construí un pipeline en Python que consolida y visualiza la ejecución presupuestal del DANE y FONDANE (2023–2026) desde reportes SIIF Nación, con gráficos por año y generales, informes automatizados e indicadores estadísticos: CAGR, correlación de Pearson e índice HHI.",
+"Extraje y organicé riesgos críticos y cronogramas de proyectos estratégicos de los documentos de transición: CENU, Ley 2335, Sistema Wayuu, ENUT y Plan Estratégico TI.",
+"Realicé análisis narrativo del presupuesto, cruzando las tablas de ejecución con el Informe de Empalme 2022–2026.",
+"Transcribí automáticamente con faster-whisper las sesiones de rendición de cuentas DANE-IGAC y generé resúmenes ejecutivos a partir de las grabaciones."],
+tools:["Python","SIIF Nación","faster-whisper","Matriz de riesgos","CAGR, Pearson, HHI","Informes ejecutivos"]},
+{t:"Profesional de seguimiento ODS, GIT de los ODS",o:"DANE, Colombia",type:"pub",s:[2025,8],e:[2025,12],txt:"ago 2025 – dic 2025",
+ctx:"Seguimiento estadístico de los Objetivos de Desarrollo Sostenible desde el Grupo Interno de Trabajo de los ODS del DANE, con énfasis en indicadores priorizados, tableros de monitoreo y coordinación con el Sistema de Naciones Unidas.",
+b:["Diseñé y mantuve bases de datos e implementé dashboards interactivos en Power BI y R para el seguimiento de los indicadores ODS priorizados por el CONPES 3819 de 2018, facilitando decisiones basadas en evidencia.",
+"Desarrollé diseños metodológicos para la gestión de proyectos estratégicos y la medición de barómetros de seguimiento, definiendo indicadores clave de desempeño y mecanismos de monitoreo y evaluación.",
+"Lideré la coordinación con agencias del Sistema de Naciones Unidas y entidades nacionales, articulando acciones conjuntas en el marco de la agenda de desarrollo sostenible y los compromisos de cooperación internacional.",
+"Representé al DANE en espacios de diálogo técnico y político sobre el avance de los ODS en Colombia.",
+"Consolidé alianzas con diversas direcciones del DANE para facilitar el intercambio de información del seguimiento estadístico nacional."],
+tools:["Power BI","R","CONPES 3819","Indicadores ODS","Sistema de Naciones Unidas","Barómetros"]},
+{t:"Docente asistente",o:"Universidad Sergio Arboleda, Colombia",type:"aca",s:[2023,11],e:null,txt:"nov 2023 – actualidad",
+ctx:"Docencia en pregrado y posgrado que traduce marcos técnicos de sostenibilidad, políticas públicas y cooperación internacional en herramientas que los estudiantes aplican a casos reales, empresariales y territoriales.",
+b:["Pregrado: cursos de sostenibilidad, gobernanza ambiental y RSC sobre migración climática, transición energética y cambio climático, con análisis de casos que cruzan crecimiento económico, equidad social y protección ambiental bajo marcos ODS y ESG.",
+"Pregrado: enseñé formulación integral de proyectos del diagnóstico territorial a la evaluación de resultados, con marco lógico, indicadores KPI, árbol de problemas y ciclo de vida del proyecto, y módulos de políticas públicas con Easton, Bardach y Roth.",
+"Posgrado: diseñé e impartí Desarrollo, Sostenibilidad y Cooperación Internacional en la Maestría en Política y Relaciones Internacionales, dirigida a funcionarios públicos, con el Enfoque de Medios de Vida Sostenibles, matrices de gestión integral de riesgos sociopolíticos y ambientales, ODS y estándares GRI.",
+"Incorporé el marco de Análisis y Desarrollo Institucional (IAD) de Elinor Ostrom para estudiar recursos de uso común y gobernanza colectiva, y módulos de cooperación descentralizada e internacionalización territorial.",
+"Lideré un proyecto final aplicado en el que los estudiantes estructuran estrategias territoriales sostenibles, con una radiografía internacional del territorio y un mapa de oportunidades de cooperación.",
+"Dirijo trabajos de grado y participo como moderador y speaker en congresos académicos y sectoriales."],
+tools:["ODS y GRI","Medios de Vida Sostenibles","IAD de Ostrom","Easton, Bardach y Roth","Marco lógico","Dirección de tesis"]},
+{t:"Consultor junior, gestión estratégica de riesgos",o:"Trust, México (remoto)",type:"pri",s:[2021,9],e:[2025,4],txt:"sep 2021 – abr 2025",
+ctx:"Más de tres años en una consultoría mexicana de riesgo estratégico, trabajando de forma remota con clientes internacionales y multinacionales, con foco en riesgo político, sostenibilidad y licencia social de operación.",
+b:["Diseñé y lideré un sistema de monitoreo de riesgos políticos para clientes del mercado internacional con Power BI, Aktek iO y R Studio, para anticipar y mitigar amenazas con un enfoque basado en datos y análisis de riesgo país.",
+"Implementé análisis avanzados de redes sociales y datos contextuales para generar reportes semanales a multinacionales, con tendencias en sostenibilidad ambiental, percepción pública y exposición reputacional.",
+"Asesoré a empresas del sector hidrocarburos en la estructuración de estrategias de RSC, integrando análisis de riesgos socioambientales y gestión de permisos regulatorios para fortalecer la licencia social de operación.",
+"Realicé estudios de impacto ambiental cuantitativos, con reportes visuales en Power BI que respaldaron decisiones estratégicas en operaciones intersectoriales nacionales e internacionales.",
+"Desarrollé diseños metodológicos para proyectos en contextos multiculturales y de alta complejidad, con KPIs y sistemas de monitoreo que midieron resultados para clientes de distintos mercados."],
+tools:["Power BI","Aktek iO","R Studio","Riesgo país","RSC","Licencia social","Análisis de redes sociales"]}
+];
+const TYPES={pub:["Sector público","#2B5C8A"],aca:["Docencia universitaria","#0F7B6C"],pri:["Sector privado y consultoría","#C98A1B"],emp:["Emprendimiento propio","#6B4C9A"]};
+const now=new Date(),NOW=[now.getFullYear(),now.getMonth()+1];
+const idx=d=>d[0]*12+d[1]-1;
+const end=j=>j.e||NOW;
+const start=Math.min(...JOBS.map(j=>idx(j.s))),stop=Math.max(...JOBS.map(j=>idx(end(j)))),span=stop-start+1;
+const pct=i=>((i-start)/span*100);
+// Línea de tiempo
+const ticks=document.getElementById("ticks");
+for(let y=Math.ceil(start/12);y<=Math.floor(stop/12);y++){
+ const s=document.createElement("span");s.style.left=pct(y*12)+"%";s.textContent=y;ticks.appendChild(s);}
+const rows=document.getElementById("rows"),jobs=document.getElementById("jobs");
+[...JOBS].sort((a,b)=>idx(a.s)-idx(b.s)).forEach(j=>{
+ const r=document.createElement("div");r.className="row";
+ const l=pct(idx(j.s)),w=pct(idx(end(j))+1)-l;
+ r.innerHTML=`<span>${j.short||j.o.split(",")[0]}: ${j.t.split(",")[0]}</span><div class="track"><div class="bar" style="left:${l}%;width:${w}%;background:${TYPES[j.type][1]}"></div></div>`;
+ rows.appendChild(r);});
+// Meses por tipo
+const tot={};JOBS.forEach(j=>tot[j.type]=(tot[j.type]||0)+(idx(end(j))-idx(j.s)+1));
+const sum=Object.values(tot).reduce((a,b)=>a+b,0);
+const split=document.getElementById("split"),legend=document.getElementById("legend");
+Object.keys(tot).forEach(k=>{
+ split.insertAdjacentHTML("beforeend",`<div style="width:${tot[k]/sum*100}%;background:${TYPES[k][1]}"></div>`);
+ legend.insertAdjacentHTML("beforeend",`<span><i style="background:${TYPES[k][1]}"></i>${TYPES[k][0]}: ${tot[k]} meses</span>`);});
+// Cargos desplegables (más reciente primero)
+[...JOBS].sort((a,b)=>idx(end(b))-idx(end(a))||idx(b.s)-idx(a.s)).forEach((j,i)=>{
+ jobs.insertAdjacentHTML("beforeend",`<details${i===0?" open":""}><summary><strong>${j.t}</strong><span>${j.txt}</span></summary><p class="org">${j.o}</p><p class="ctx">${j.ctx}</p><p class="sub">Funciones y logros</p><ul>${j.b.map(x=>`<li>${x}</li>`).join("")}</ul><div class="tags in">${j.tools.map(x=>`<span>${x}</span>`).join("")}</div></details>`);});
+// Documentos de Producción. Para agregar uno: suba el PDF a la carpeta documentos/ del repositorio y añada una línea aquí.
+const DOCS=[
+{t:"Tesis de maestría: pobreza monetaria en Bogotá y planes de desarrollo 2016-2023",tipo:"Tesis",d:"Evaluación ex post por fases que combina análisis cualitativo y cuantitativo. Pontificia Universidad Javeriana.",archivo:"documentos/tesis-pobreza-monetaria-bogota.pdf"},
+{t:"Pipeline de ejecución presupuestal DANE y FONDANE 2023–2026",tipo:"Herramienta",d:"Informes automatizados desde reportes SIIF Nación con CAGR, correlación de Pearson e índice HHI."},
+{t:"Matriz de riesgos institucionales del empalme DANE",tipo:"Análisis",d:"28 hallazgos bajo un marco de criticidad por impacto, con documentos ejecutivos de síntesis."},
+{t:"Asignatura Desarrollo, Sostenibilidad y Cooperación Internacional",tipo:"Diseño curricular",d:"Maestría en Política y Relaciones Internacionales, con proyecto final aplicado de estrategia territorial."},
+{t:"Academia de Ecohabilidades",tipo:"Programa",d:"Empleabilidad juvenil en Pacho, Cundinamarca: cuatro talleres, 18 jóvenes acompañados y 419 ofertas laborales verificadas."},
+{t:"Congresos académicos y sectoriales",tipo:"Ponencias",d:"Participación como moderador y speaker sobre sostenibilidad, gobernanza y desarrollo."},
+{t:"Dirección de trabajos de grado",tipo:"Docencia",d:"Pregrado y posgrado, desde el problema de investigación hasta la sustentación."}
+// Plantilla: {t:"Título",tipo:"Informe",d:"Descripción breve.",archivo:"documentos/mi-informe.pdf"}  (o enlace:"https://..." para una publicación en línea)
+];
+const dl=document.getElementById("docs");
+DOCS.forEach(x=>{
+ const r=document.createElement("div");r.className="doc";
+ r.innerHTML=`<div><b>${x.t}</b><small>${x.tipo}</small><span>${x.d}</span></div>`;
+ if(x.enlace){r.insertAdjacentHTML("beforeend",`<a class="btn alt" href="${x.enlace}" target="_blank" rel="noopener">Ver publicación</a>`);}
+ else if(x.archivo){
+  const a=document.createElement("a");a.className="btn alt off";a.textContent="Próximamente";a.setAttribute("aria-disabled","true");r.appendChild(a);
+  fetch(x.archivo,{method:"HEAD"}).then(res=>{if(res.ok){a.href=x.archivo;a.target="_blank";a.rel="noopener";a.className="btn alt";a.textContent="Ver documento";a.removeAttribute("aria-disabled");}}).catch(()=>{});
+ }
+ dl.appendChild(r);});
+// Copiar correo
+document.getElementById("copy").addEventListener("click",()=>{
+ const m=document.getElementById("msg");
+ navigator.clipboard.writeText("santiago.carranza5097@gmail.com").then(()=>{m.textContent="Correo copiado";setTimeout(()=>m.textContent="",2500);},()=>{m.textContent="No se pudo copiar. Use el botón Enviar correo.";});});
+</script>
+</body>
+</html>
